@@ -2,7 +2,7 @@
     "use strict";
 
     function NumberGeneration() {
-        var MAX_NO_OF_CONSECUTIVE_PITCH_CHANGES = 2; /* after the initial one, so 2 == 3 in a row */
+        var MAX_NO_OF_CONSECUTIVE_PITCH_CHANGES = 3;
 
         var self = {};
         var currentNumber = 1;
