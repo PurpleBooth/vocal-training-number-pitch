@@ -1,6 +1,7 @@
 application: number-pitch
 version: 1
 runtime: php
+threadsafe: true
 api_version: 1
 
 handlers:
