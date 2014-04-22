@@ -2,7 +2,7 @@
     "use strict";
 
     function NumberGeneration() {
-        var MAX_NO_OF_UPS = 3;
+        var MAX_NO_OF_CONSECUTIVE_PITCH_CHANGES = 2; /* after the initial one, so 2 == 3 in a row */
 
         var self = {};
         var currentNumber = 1;
@@ -21,10 +21,10 @@
         self.changeText = function () {
             var up;
 
-            if (upCount >= MAX_NO_OF_UPS && lastMovementWasUp) {
+            if (upCount >= MAX_NO_OF_CONSECUTIVE_PITCH_CHANGES && lastMovementWasUp) {
                 up = false;
             }
-            else if (downCount >= MAX_NO_OF_UPS && !lastMovementWasUp) {
+            else if (downCount >= MAX_NO_OF_CONSECUTIVE_PITCH_CHANGES && !lastMovementWasUp) {
                 up = true
             }
             else {
